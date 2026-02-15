@@ -1,0 +1,103 @@
+@import url('https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@300;400;500;600;700&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    --background: 0 0% 5%;
+    --foreground: 120 100% 60%;
+
+    --card: 0 0% 8%;
+    --card-foreground: 120 100% 60%;
+
+    --popover: 0 0% 8%;
+    --popover-foreground: 120 100% 60%;
+
+    --primary: 120 100% 50%;
+    --primary-foreground: 0 0% 0%;
+
+    --secondary: 180 100% 50%;
+    --secondary-foreground: 0 0% 0%;
+
+    --muted: 0 0% 15%;
+    --muted-foreground: 120 100% 40%;
+
+    --accent: 280 85% 70%;
+    --accent-foreground: 0 0% 0%;
+
+    --destructive: 0 84% 60%;
+    --destructive-foreground: 0 0% 98%;
+
+    --border: 120 100% 20%;
+    --input: 120 100% 20%;
+    --ring: 120 100% 50%;
+
+    --radius: 0rem;
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+  body {
+    @apply bg-background text-foreground font-mono;
+    font-feature-settings: "liga" 1, "calt" 1;
+  }
+}
+
+@layer utilities {
+  .text-glow {
+    text-shadow: 0 0 10px rgba(0, 255, 65, 0.8),
+                 0 0 20px rgba(0, 255, 65, 0.5),
+                 0 0 30px rgba(0, 255, 65, 0.3);
+  }
+  
+  .text-glow-cyan {
+    text-shadow: 0 0 10px rgba(0, 255, 255, 0.8),
+                 0 0 20px rgba(0, 255, 255, 0.5),
+                 0 0 30px rgba(0, 255, 255, 0.3);
+  }
+  
+  .text-glow-purple {
+    text-shadow: 0 0 10px rgba(189, 147, 249, 0.8),
+                 0 0 20px rgba(189, 147, 249, 0.5);
+  }
+
+  .scanline {
+    position: relative;
+    overflow: hidden;
+  }
+  
+  .scanline::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 2px;
+    background: linear-gradient(
+      to bottom,
+      transparent,
+      rgba(0, 255, 65, 0.3),
+      transparent
+    );
+    animation: scanline 8s linear infinite;
+    pointer-events: none;
+    z-index: 50;
+  }
+
+  .terminal-border {
+    border: 1px solid rgba(0, 255, 65, 0.3);
+    box-shadow: 0 0 10px rgba(0, 255, 65, 0.2);
+  }
+  
+  .grid-bg {
+    background-image: 
+      linear-gradient(rgba(0, 255, 65, 0.05) 1px, transparent 1px),
+      linear-gradient(90deg, rgba(0, 255, 65, 0.05) 1px, transparent 1px);
+    background-size: 50px 50px;
+  }
+}
