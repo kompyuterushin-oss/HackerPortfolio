@@ -62,40 +62,40 @@ const Skills = () => {
             <Terminal className="w-6 h-6 text-terminal-cyan" />
             <span className="text-terminal-cyan/60 font-mono">$ ls -la skills/</span>
           </div>
-          <h2 className="text-4xl md:text-5xl font-bold text-terminal-green text-glow mb-4">
+          <h2 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold text-terminal-green text-glow mb-4">
             <span className="text-terminal-cyan">&gt;</span> Ka'siplik ko'nikpeler
           </h2>
           <div className="h-1 w-24 bg-gradient-to-r from-terminal-green via-terminal-cyan to-transparent shadow-glow" />
         </div>
 
         {/* Skills Grid */}
-        <div className="grid md:grid-cols-2 gap-8 mb-12">
+        <div className="grid md:grid-cols-2 gap-4 sm:gap-6 md:gap-8 mb-8 sm:mb-10 md:mb-12">
           {skillCategories.map((category, catIndex) => {
             const Icon = category.icon;
             return (
               <div
                 key={catIndex}
-                className="terminal-border bg-black/40 backdrop-blur-sm p-6 hover:bg-black/60 transition-all duration-300 group"
+                className="terminal-border bg-black/40 backdrop-blur-sm p-4 sm:p-5 md:p-6 hover:bg-black/60 transition-all duration-300 group"
               >
-                <div className="flex items-center gap-3 mb-6">
-                  <Icon className={`w-6 h-6 ${category.color}`} />
-                  <h3 className={`text-2xl font-bold ${category.color}`}>
+                <div className="flex items-center gap-2 sm:gap-3 mb-4 sm:mb-5 md:mb-6">
+                  <Icon className={`w-5 h-5 sm:w-6 sm:h-6 ${category.color} flex-shrink-0`} />
+                  <h3 className={`text-lg sm:text-xl md:text-2xl font-bold ${category.color}`}>
                     {category.title}
                   </h3>
                 </div>
 
-                <div className="space-y-4">
+                <div className="space-y-3 sm:space-y-4">
                   {category.skills.map((skill, skillIndex) => (
                     <div key={skillIndex}>
-                      <div className="flex items-center justify-between mb-2">
-                        <span className="text-terminal-green/80 text-sm font-mono">
+                      <div className="flex items-center justify-between mb-1.5 sm:mb-2">
+                        <span className="text-terminal-green/80 text-xs sm:text-sm font-mono truncate pr-2">
                           {skill.name}
                         </span>
-                        <span className="text-terminal-cyan/60 text-xs font-mono">
+                        <span className="text-terminal-cyan/60 text-[10px] sm:text-xs font-mono whitespace-nowrap flex-shrink-0">
                           {skill.level}%
                         </span>
                       </div>
-                      <div className="h-2 bg-terminal-green/10 border border-terminal-green/30 overflow-hidden">
+                      <div className="h-1.5 sm:h-2 bg-terminal-green/10 border border-terminal-green/30 overflow-hidden">
                         <div
                           className={`h-full bg-gradient-to-r from-terminal-green to-terminal-cyan transition-all duration-1000 ease-out`}
                           style={{ 
@@ -108,7 +108,7 @@ const Skills = () => {
                   ))}
                 </div>
 
-                <div className="mt-4 flex items-center gap-2 text-terminal-cyan/40 text-xs">
+                <div className="mt-3 sm:mt-4 flex items-center gap-2 text-terminal-cyan/40 text-[10px] sm:text-xs">
                   <span className="font-mono">$</span>
                   <div className="flex-1 h-px bg-terminal-cyan/20" />
                   <span className="font-mono">[EXPERT]</span>
@@ -119,23 +119,23 @@ const Skills = () => {
         </div>
 
         {/* Tools & Technologies */}
-        <div className="terminal-border bg-black/40 backdrop-blur-sm p-6">
-          <div className="flex items-center gap-2 mb-6">
-            <Globe className="w-5 h-5 text-terminal-purple" />
-            <h3 className="text-xl font-bold text-terminal-purple">
+        <div className="terminal-border bg-black/40 backdrop-blur-sm p-4 sm:p-5 md:p-6">
+          <div className="flex items-center gap-2 mb-4 sm:mb-5 md:mb-6">
+            <Globe className="w-4 h-4 sm:w-5 sm:h-5 text-terminal-purple flex-shrink-0" />
+            <h3 className="text-base sm:text-lg md:text-xl font-bold text-terminal-purple">
               Qurallar ha'm Texnologiyalar
             </h3>
           </div>
           
-          <div className="flex flex-wrap gap-3">
+          <div className="flex flex-wrap gap-2 sm:gap-2.5 md:gap-3">
             {tools.map((tool, index) => (
               <div
                 key={index}
-                className="px-4 py-2 border border-terminal-green/30 bg-black/40 text-terminal-green/80 hover:bg-terminal-green/10 hover:border-terminal-green hover:text-terminal-green transition-all duration-300 cursor-default group"
+                className="px-2 sm:px-3 md:px-4 py-1.5 sm:py-2 border border-terminal-green/30 bg-black/40 text-terminal-green/80 hover:bg-terminal-green/10 hover:border-terminal-green hover:text-terminal-green transition-all duration-300 cursor-default group"
               >
-                <div className="flex items-center gap-2">
-                  <span className="text-terminal-cyan/60 text-xs group-hover:text-terminal-cyan">$</span>
-                  <span className="text-sm font-mono">{tool}</span>
+                <div className="flex items-center gap-1.5 sm:gap-2">
+                  <span className="text-terminal-cyan/60 text-[10px] sm:text-xs group-hover:text-terminal-cyan">$</span>
+                  <span className="text-xs sm:text-sm font-mono whitespace-nowrap">{tool}</span>
                 </div>
               </div>
             ))}

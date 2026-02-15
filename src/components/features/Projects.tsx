@@ -54,63 +54,63 @@ const Projects = () => {
             <Terminal className="w-6 h-6 text-terminal-cyan" />
             <span className="text-terminal-cyan/60 font-mono">$ git log --all --graph</span>
           </div>
-          <h2 className="text-4xl md:text-5xl font-bold text-terminal-green text-glow mb-4">
+          <h2 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold text-terminal-green text-glow mb-4">
             <span className="text-terminal-cyan">&gt;</span> Proekler (ó'z betinshe)
           </h2>
           <div className="h-1 w-24 bg-gradient-to-r from-terminal-green via-terminal-cyan to-transparent shadow-glow" />
         </div>
 
-        <div className="space-y-6">
+        <div className="space-y-4 sm:space-y-5 md:space-y-6">
           {projects.map((project, index) => {
             const Icon = project.icon;
             return (
               <div
                 key={index}
-                className="terminal-border bg-black/40 backdrop-blur-sm p-6 hover:bg-black/60 transition-all duration-300 group hover:shadow-glow"
+                className="terminal-border bg-black/40 backdrop-blur-sm p-4 sm:p-5 md:p-6 hover:bg-black/60 transition-all duration-300 group hover:shadow-glow"
               >
                 {/* Header */}
-                <div className="flex items-start justify-between mb-4">
-                  <div className="flex items-center gap-3">
-                    <Icon className={`w-6 h-6 ${project.color}`} />
-                    <div>
-                      <h3 className="text-xl font-bold text-terminal-green group-hover:text-glow transition-all">
+                <div className="flex items-start justify-between mb-3 sm:mb-4 gap-2">
+                  <div className="flex items-start gap-2 sm:gap-3 min-w-0 flex-1">
+                    <Icon className={`w-5 h-5 sm:w-6 sm:h-6 ${project.color} flex-shrink-0 mt-0.5`} />
+                    <div className="min-w-0">
+                      <h3 className="text-base sm:text-lg md:text-xl font-bold text-terminal-green group-hover:text-glow transition-all break-words">
                         {project.title}
                       </h3>
-                      <span className="text-xs text-terminal-cyan/60 font-mono">
+                      <span className="text-[10px] sm:text-xs text-terminal-cyan/60 font-mono">
                         {project.category}
                       </span>
                     </div>
                   </div>
-                  <div className={`px-2 py-1 border ${project.color} border-current text-xs font-mono`}>
+                  <div className={`px-1.5 sm:px-2 py-0.5 sm:py-1 border ${project.color} border-current text-[10px] sm:text-xs font-mono whitespace-nowrap flex-shrink-0`}>
                     {project.status}
                   </div>
                 </div>
 
                 {/* Description */}
-                <p className="text-terminal-green/70 text-sm leading-relaxed mb-4">
+                <p className="text-terminal-green/70 text-xs sm:text-sm leading-relaxed mb-3 sm:mb-4">
                   {project.description}
                 </p>
 
                 {/* Highlights */}
-                <div className="mb-4 space-y-1">
+                <div className="mb-3 sm:mb-4 space-y-0.5 sm:space-y-1">
                   {project.highlights.map((highlight, hIndex) => (
-                    <div key={hIndex} className="flex items-center gap-2 text-xs">
-                      <span className="text-terminal-cyan">✓</span>
+                    <div key={hIndex} className="flex items-start gap-1.5 sm:gap-2 text-[10px] sm:text-xs">
+                      <span className="text-terminal-cyan flex-shrink-0 mt-0.5">✓</span>
                       <span className="text-terminal-green/60">{highlight}</span>
                     </div>
                   ))}
                 </div>
 
                 {/* Technologies */}
-                <div className="mb-4">
-                  <div className="text-terminal-cyan/60 text-xs mb-2 font-mono">
+                <div className="mb-3 sm:mb-4">
+                  <div className="text-terminal-cyan/60 text-[10px] sm:text-xs mb-1.5 sm:mb-2 font-mono">
                     $ cat tech_stack.txt
                   </div>
-                  <div className="flex flex-wrap gap-2">
+                  <div className="flex flex-wrap gap-1.5 sm:gap-2">
                     {project.tech.map((tech, techIndex) => (
                       <span
                         key={techIndex}
-                        className="px-2 py-1 bg-terminal-green/10 border border-terminal-green/30 text-terminal-green/80 text-xs font-mono"
+                        className="px-1.5 sm:px-2 py-0.5 sm:py-1 bg-terminal-green/10 border border-terminal-green/30 text-terminal-green/80 text-[10px] sm:text-xs font-mono"
                       >
                         {tech}
                       </span>
@@ -119,19 +119,19 @@ const Projects = () => {
                 </div>
 
                 {/* Actions */}
-                <div className="flex items-center gap-3 pt-4 border-t border-terminal-green/30">
-                  <button className="flex items-center gap-2 px-3 py-2 border border-terminal-cyan/50 text-terminal-cyan hover:bg-terminal-cyan/10 transition-all duration-300 text-sm group/btn">
-                    <Github className="w-4 h-4 group-hover/btn:rotate-12 transition-transform" />
+                <div className="flex items-center gap-2 sm:gap-3 pt-3 sm:pt-4 border-t border-terminal-green/30">
+                  <button className="flex items-center gap-1.5 sm:gap-2 px-2 sm:px-3 py-1.5 sm:py-2 border border-terminal-cyan/50 text-terminal-cyan hover:bg-terminal-cyan/10 transition-all duration-300 text-xs sm:text-sm group/btn">
+                    <Github className="w-3 h-3 sm:w-4 sm:h-4 group-hover/btn:rotate-12 transition-transform" />
                     <span className="font-mono">Kod</span>
                   </button>
-                  <button className="flex items-center gap-2 px-3 py-2 border border-terminal-green/50 text-terminal-green hover:bg-terminal-green/10 transition-all duration-300 text-sm group/btn">
-                    <ExternalLink className="w-4 h-4 group-hover/btn:translate-x-1 group-hover/btn:-translate-y-1 transition-transform" />
+                  <button className="flex items-center gap-1.5 sm:gap-2 px-2 sm:px-3 py-1.5 sm:py-2 border border-terminal-green/50 text-terminal-green hover:bg-terminal-green/10 transition-all duration-300 text-xs sm:text-sm group/btn">
+                    <ExternalLink className="w-3 h-3 sm:w-4 sm:h-4 group-hover/btn:translate-x-1 group-hover/btn:-translate-y-1 transition-transform" />
                     <span className="font-mono">Demo</span>
                   </button>
                 </div>
 
                 {/* Footer */}
-                <div className="mt-4 flex items-center gap-2 text-terminal-cyan/40 text-xs">
+                <div className="mt-3 sm:mt-4 flex items-center gap-2 text-terminal-cyan/40 text-[10px] sm:text-xs">
                   <span className="font-mono">$</span>
                   <div className="flex-1 h-px bg-terminal-cyan/20" />
                   <span className="font-mono">[{String(index + 1).padStart(2, '0')}/04]</span>

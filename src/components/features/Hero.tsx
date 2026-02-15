@@ -118,18 +118,18 @@ const Hero = () => {
             <div className="space-y-6">
             <div className="space-y-2">
               <div className="flex flex-col gap-2">
-                <span className="text-terminal-cyan/70 text-sm">ATI:</span>
-                <h1 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold text-terminal-green text-glow animate-pulse break-words">
+                <span className="text-terminal-cyan/70 text-xs sm:text-sm">ATI:</span>
+                <h1 className="text-xl xs:text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold text-terminal-green text-glow animate-pulse break-words leading-tight">
                   Ibadullaev Ruslan
                 </h1>
               </div>
             </div>
 
             <div className="space-y-2">
-              <div className="flex flex-col sm:flex-row sm:items-start gap-2 sm:gap-4">
-                <span className="text-terminal-cyan/70 text-sm whitespace-nowrap">RÓLI:</span>
+              <div className="flex flex-col sm:flex-row sm:items-start gap-1 sm:gap-4">
+                <span className="text-terminal-cyan/70 text-xs sm:text-sm whitespace-nowrap">RÓLI:</span>
                 <div className="space-y-1">
-                  <p className="text-lg sm:text-xl md:text-2xl text-terminal-purple font-semibold text-glow-purple">
+                  <p className="text-base sm:text-lg md:text-xl lg:text-2xl text-terminal-purple font-semibold text-glow-purple">
                     Dastúrshi
                   </p>
                 </div>
@@ -137,9 +137,9 @@ const Hero = () => {
             </div>
 
             <div className="space-y-2">
-              <div className="flex flex-col sm:flex-row sm:items-start gap-2 sm:gap-4">
-                <span className="text-terminal-cyan/70 text-sm whitespace-nowrap">HAQQIMDA:</span>
-                <p className="text-sm sm:text-base text-terminal-green/80 leading-relaxed">
+              <div className="flex flex-col sm:flex-row sm:items-start gap-1 sm:gap-4">
+                <span className="text-terminal-cyan/70 text-xs sm:text-sm whitespace-nowrap">HAQQIMDA:</span>
+                <p className="text-xs sm:text-sm md:text-base text-terminal-green/80 leading-relaxed">
                   Házirgi zaman texnologiyaları menen jumıs isleytuǵın da'stú'rshi. 
                   Backend, frontend hám kiberqá'wipsizlik ka'sibinde ko'p jıllıq tajriybege iye. 
                   Qıyın má'selelеrdi sheshiw hám qá'wipsiz kod jazıw - meniń kú'shli tárepim.
@@ -147,23 +147,23 @@ const Hero = () => {
               </div>
             </div>
 
-            <div className="flex flex-col sm:flex-row sm:items-center gap-2 sm:gap-4 pt-4">
-              <span className="text-terminal-cyan/70 text-sm whitespace-nowrap">QOSIMSHA:</span>
+            <div className="flex flex-col sm:flex-row sm:items-center gap-1 sm:gap-4 pt-2 sm:pt-4">
+              <span className="text-terminal-cyan/70 text-xs sm:text-sm whitespace-nowrap">QOSIMSHA:</span>
               <div className="flex items-center gap-2">
                 <div className="w-2 h-2 bg-terminal-green rounded-full animate-pulse shadow-glow" />
-                <span className="text-terminal-green">Online</span>
+                <span className="text-terminal-green text-sm sm:text-base">Online</span>
               </div>
             </div>
             
             {/* Programming Languages */}
             <div className="space-y-2">
-              <div className="flex flex-col sm:flex-row sm:items-start gap-2 sm:gap-4">
-                <span className="text-terminal-cyan/70 text-sm whitespace-nowrap">TILLAR:</span>
-                <div className="flex flex-wrap gap-2">
+              <div className="flex flex-col sm:flex-row sm:items-start gap-1 sm:gap-4">
+                <span className="text-terminal-cyan/70 text-xs sm:text-sm whitespace-nowrap">TILLAR:</span>
+                <div className="flex flex-wrap gap-1 sm:gap-2">
                   {['JavaScript', 'TypeScript', 'Python', 'Java', 'C++', 'Rust', 'Go', 'PHP'].map((lang, idx) => (
                     <span 
                       key={idx}
-                      className="px-2 py-1 bg-terminal-green/10 border border-terminal-green/30 text-terminal-green hover:border-terminal-green hover:bg-terminal-green/20 transition-all text-xs sm:text-sm font-mono cursor-default"
+                      className="px-1.5 sm:px-2 py-0.5 sm:py-1 bg-terminal-green/10 border border-terminal-green/30 text-terminal-green hover:border-terminal-green hover:bg-terminal-green/20 transition-all text-[10px] sm:text-xs md:text-sm font-mono cursor-default"
                     >
                       {lang}
                     </span>
@@ -175,47 +175,47 @@ const Hero = () => {
           </div> { /* End of Output grid column */ }
 
             {/* Stats Cards */}
-            <div className="grid grid-cols-3 gap-2 sm:gap-4 pt-6">
-              <div className="terminal-border bg-black/60 p-2 sm:p-4 text-center hover:bg-terminal-green/5 transition-all">
-                <Code2 className="w-4 h-4 sm:w-6 sm:h-6 text-terminal-cyan mx-auto mb-1 sm:mb-2" />
-                <div className="text-lg sm:text-2xl font-bold text-terminal-green">10+</div>
-                <div className="text-[10px] sm:text-xs text-terminal-green/60">proektler</div>
+            <div className="grid grid-cols-3 gap-2 sm:gap-3 md:gap-4 pt-4 sm:pt-6">
+              <div className="terminal-border bg-black/60 p-2 sm:p-3 md:p-4 text-center hover:bg-terminal-green/5 transition-all">
+                <Code2 className="w-3 h-3 sm:w-5 sm:h-5 md:w-6 md:h-6 text-terminal-cyan mx-auto mb-1 sm:mb-2" />
+                <div className="text-base sm:text-xl md:text-2xl font-bold text-terminal-green">10+</div>
+                <div className="text-[9px] sm:text-[11px] md:text-xs text-terminal-green/60 leading-tight">proektler</div>
               </div>
-              <div className="terminal-border bg-black/60 p-2 sm:p-4 text-center hover:bg-terminal-purple/5 transition-all">
-                <Shield className="w-4 h-4 sm:w-6 sm:h-6 text-terminal-purple mx-auto mb-1 sm:mb-2" />
-                <div className="text-lg sm:text-2xl font-bold text-terminal-purple">2+</div>
-                <div className="text-[10px] sm:text-xs text-terminal-green/60">Jıllıq ta'jiriyбe</div>
+              <div className="terminal-border bg-black/60 p-2 sm:p-3 md:p-4 text-center hover:bg-terminal-purple/5 transition-all">
+                <Shield className="w-3 h-3 sm:w-5 sm:h-5 md:w-6 md:h-6 text-terminal-purple mx-auto mb-1 sm:mb-2" />
+                <div className="text-base sm:text-xl md:text-2xl font-bold text-terminal-purple">2+</div>
+                <div className="text-[9px] sm:text-[11px] md:text-xs text-terminal-green/60 leading-tight">Jıllıq ta'jiriyбe</div>
               </div>
-              <div className="terminal-border bg-black/60 p-2 sm:p-4 text-center hover:bg-terminal-cyan/5 transition-all">
-                <Zap className="w-4 h-4 sm:w-6 sm:h-6 text-terminal-green mx-auto mb-1 sm:mb-2" />
-                <div className="text-lg sm:text-2xl font-bold text-terminal-cyan">100%</div>
-                <div className="text-[10px] sm:text-xs text-terminal-green/60">Sapa</div>
+              <div className="terminal-border bg-black/60 p-2 sm:p-3 md:p-4 text-center hover:bg-terminal-cyan/5 transition-all">
+                <Zap className="w-3 h-3 sm:w-5 sm:h-5 md:w-6 md:h-6 text-terminal-green mx-auto mb-1 sm:mb-2" />
+                <div className="text-base sm:text-xl md:text-2xl font-bold text-terminal-cyan">100%</div>
+                <div className="text-[9px] sm:text-[11px] md:text-xs text-terminal-green/60 leading-tight">Sapa</div>
               </div>
             </div>
 
             {/* CTA Button */}
-            <div className="pt-8 flex gap-2 sm:gap-4 flex-wrap">
+            <div className="pt-4 sm:pt-6 md:pt-8 flex gap-2 sm:gap-3 md:gap-4 flex-wrap">
               <button
                 onClick={scrollToProjects}
-                className="group flex items-center gap-1 sm:gap-2 px-3 sm:px-6 py-2 sm:py-3 bg-terminal-green/10 border-2 border-terminal-green text-terminal-green hover:bg-terminal-green hover:text-black transition-all duration-300 shadow-glow hover:shadow-glow-cyan hover:scale-105"
+                className="group flex items-center gap-1 sm:gap-2 px-3 sm:px-4 md:px-6 py-2 sm:py-2.5 md:py-3 bg-terminal-green/10 border-2 border-terminal-green text-terminal-green hover:bg-terminal-green hover:text-black transition-all duration-300 shadow-glow hover:shadow-glow-cyan hover:scale-105"
               >
-                <Terminal className="w-4 h-4 sm:w-5 sm:h-5" />
-                <span className="font-semibold text-xs sm:text-base">$ ls proekler/</span>
-                <ChevronRight className="w-3 h-3 sm:w-4 sm:h-4 group-hover:translate-x-1 transition-transform" />
+                <Terminal className="w-3 h-3 sm:w-4 sm:h-4 md:w-5 md:h-5" />
+                <span className="font-semibold text-[10px] sm:text-xs md:text-base whitespace-nowrap">$ ls proekler/</span>
+                <ChevronRight className="w-3 h-3 sm:w-3.5 sm:h-3.5 md:w-4 md:h-4 group-hover:translate-x-1 transition-transform" />
               </button>
               <a
                 href="#contact"
-                className="group flex items-center gap-1 sm:gap-2 px-3 sm:px-6 py-2 sm:py-3 border-2 border-terminal-cyan text-terminal-cyan hover:bg-terminal-cyan/10 transition-all duration-300 hover:scale-105"
+                className="group flex items-center gap-1 sm:gap-2 px-3 sm:px-4 md:px-6 py-2 sm:py-2.5 md:py-3 border-2 border-terminal-cyan text-terminal-cyan hover:bg-terminal-cyan/10 transition-all duration-300 hover:scale-105"
               >
-                <span className="font-semibold text-xs sm:text-base">$ baylanıs</span>
-                <ChevronRight className="w-3 h-3 sm:w-4 sm:h-4 group-hover:translate-x-1 transition-transform" />
+                <span className="font-semibold text-[10px] sm:text-xs md:text-base whitespace-nowrap">$ baylanıs</span>
+                <ChevronRight className="w-3 h-3 sm:w-3.5 sm:h-3.5 md:w-4 md:h-4 group-hover:translate-x-1 transition-transform" />
               </a>
             </div>
           </div> { /* End of terminal-border div */ }
 
           {/* ASCII Art */}
-          <div className="mt-12 pt-8 border-t border-terminal-green/30">
-            <pre className="text-terminal-green/40 text-[10px] md:text-xs overflow-x-auto">
+          <div className="mt-8 sm:mt-10 md:mt-12 pt-6 sm:pt-7 md:pt-8 border-t border-terminal-green/30">
+            <pre className="text-terminal-green/40 text-[8px] sm:text-[9px] md:text-[10px] lg:text-xs overflow-x-auto">
 {`
 ██████╗ ██╗   ██╗███████╗██╗      █████╗ ███╗   ██╗
 ██╔══██╗██║   ██║██╔════╝██║     ██╔══██╗████╗  ██║

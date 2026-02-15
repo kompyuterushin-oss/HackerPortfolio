@@ -45,7 +45,7 @@ const Contact = () => {
             <Terminal className="w-6 h-6 text-terminal-cyan" />
             <span className="text-terminal-cyan/60 font-mono">$ ./contact.sh --send-message</span>
           </div>
-          <h2 className="text-4xl md:text-5xl font-bold text-terminal-green text-glow mb-4">
+          <h2 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold text-terminal-green text-glow mb-4">
             <span className="text-terminal-cyan">&gt;</span> Baylanıs
           </h2>
           <div className="h-1 w-24 bg-gradient-to-r from-terminal-green via-terminal-cyan to-transparent shadow-glow" />
@@ -54,8 +54,8 @@ const Contact = () => {
         <div className="grid md:grid-cols-5 gap-8">
           {/* Contact Form */}
           <div className="md:col-span-3">
-            <div className="terminal-border bg-black/40 backdrop-blur-sm p-6 md:p-8">
-              <div className="text-terminal-cyan/60 text-sm mb-6 font-mono">
+            <div className="terminal-border bg-black/40 backdrop-blur-sm p-4 sm:p-5 md:p-6 lg:p-8">
+              <div className="text-terminal-cyan/60 text-xs sm:text-sm mb-4 sm:mb-5 md:mb-6 font-mono">
                 $ nano message.txt
               </div>
 
@@ -73,10 +73,10 @@ const Contact = () => {
                   </div>
                 </div>
               ) : (
-                <form onSubmit={handleSubmit} className="space-y-6">
+                <form onSubmit={handleSubmit} className="space-y-4 sm:space-y-5 md:space-y-6">
                   {/* Name Input */}
                   <div>
-                    <label className="block text-terminal-green/80 text-sm mb-2 font-mono">
+                    <label className="block text-terminal-green/80 text-xs sm:text-sm mb-1.5 sm:mb-2 font-mono">
                       <span className="text-terminal-cyan">$</span> Atıńız:
                     </label>
                     <input
@@ -85,14 +85,14 @@ const Contact = () => {
                       value={formData.name}
                       onChange={handleChange}
                       required
-                      className="w-full bg-black/40 border border-terminal-green/30 px-4 py-3 text-terminal-green focus:border-terminal-green focus:outline-none focus:shadow-glow transition-all duration-300 font-mono"
+                      className="w-full bg-black/40 border border-terminal-green/30 px-3 sm:px-4 py-2 sm:py-2.5 md:py-3 text-sm sm:text-base text-terminal-green focus:border-terminal-green focus:outline-none focus:shadow-glow transition-all duration-300 font-mono"
                       placeholder="John Doe"
                     />
                   </div>
 
                   {/* Email Input */}
                   <div>
-                    <label className="block text-terminal-green/80 text-sm mb-2 font-mono">
+                    <label className="block text-terminal-green/80 text-xs sm:text-sm mb-1.5 sm:mb-2 font-mono">
                       <span className="text-terminal-cyan">$</span> Email:
                     </label>
                     <input
@@ -101,14 +101,14 @@ const Contact = () => {
                       value={formData.email}
                       onChange={handleChange}
                       required
-                      className="w-full bg-black/40 border border-terminal-green/30 px-4 py-3 text-terminal-green focus:border-terminal-green focus:outline-none focus:shadow-glow transition-all duration-300 font-mono"
+                      className="w-full bg-black/40 border border-terminal-green/30 px-3 sm:px-4 py-2 sm:py-2.5 md:py-3 text-sm sm:text-base text-terminal-green focus:border-terminal-green focus:outline-none focus:shadow-glow transition-all duration-300 font-mono"
                       placeholder="john@example.com"
                     />
                   </div>
 
                   {/* Message Input */}
                   <div>
-                    <label className="block text-terminal-green/80 text-sm mb-2 font-mono">
+                    <label className="block text-terminal-green/80 text-xs sm:text-sm mb-1.5 sm:mb-2 font-mono">
                       <span className="text-terminal-cyan">$</span> Xabar:
                     </label>
                     <textarea
@@ -117,7 +117,7 @@ const Contact = () => {
                       onChange={handleChange}
                       required
                       rows={6}
-                      className="w-full bg-black/40 border border-terminal-green/30 px-4 py-3 text-terminal-green focus:border-terminal-green focus:outline-none focus:shadow-glow transition-all duration-300 font-mono resize-none"
+                      className="w-full bg-black/40 border border-terminal-green/30 px-3 sm:px-4 py-2 sm:py-2.5 md:py-3 text-sm sm:text-base text-terminal-green focus:border-terminal-green focus:outline-none focus:shadow-glow transition-all duration-300 font-mono resize-none"
                       placeholder="Siziń xabarıńız..."
                     />
                   </div>
@@ -125,9 +125,9 @@ const Contact = () => {
                   {/* Submit Button */}
                   <button
                     type="submit"
-                    className="w-full flex items-center justify-center gap-2 px-6 py-3 bg-terminal-green/10 border border-terminal-green text-terminal-green hover:bg-terminal-green hover:text-black transition-all duration-300 shadow-glow hover:shadow-glow-cyan font-mono font-semibold group"
+                    className="w-full flex items-center justify-center gap-2 px-4 sm:px-5 md:px-6 py-2.5 sm:py-3 bg-terminal-green/10 border border-terminal-green text-terminal-green hover:bg-terminal-green hover:text-black transition-all duration-300 shadow-glow hover:shadow-glow-cyan font-mono font-semibold group text-xs sm:text-sm md:text-base"
                   >
-                    <Send className="w-5 h-5 group-hover:translate-x-1 transition-transform" />
+                    <Send className="w-4 h-4 sm:w-5 sm:h-5 group-hover:translate-x-1 transition-transform" />
                     <span>$ send --message</span>
                   </button>
                 </form>
@@ -136,26 +136,26 @@ const Contact = () => {
           </div>
 
           {/* Social Links */}
-          <div className="md:col-span-2 space-y-6">
-            <div className="terminal-border bg-black/40 backdrop-blur-sm p-6">
-              <div className="text-terminal-cyan/60 text-sm mb-6 font-mono">
+          <div className="md:col-span-2 space-y-4 sm:space-y-5 md:space-y-6">
+            <div className="terminal-border bg-black/40 backdrop-blur-sm p-4 sm:p-5 md:p-6">
+              <div className="text-terminal-cyan/60 text-xs sm:text-sm mb-4 sm:mb-5 md:mb-6 font-mono">
                 $ cat social_links.json
               </div>
-              <div className="space-y-4">
+              <div className="space-y-3 sm:space-y-4">
                 {socialLinks.map((social, index) => {
                   const Icon = social.icon;
                   return (
                     <a
                       key={index}
                       href={social.url}
-                      className="flex items-center gap-4 p-4 border border-terminal-green/30 hover:border-terminal-green hover:bg-terminal-green/10 transition-all duration-300 group"
+                      className="flex items-center gap-3 sm:gap-4 p-3 sm:p-4 border border-terminal-green/30 hover:border-terminal-green hover:bg-terminal-green/10 transition-all duration-300 group"
                     >
-                      <Icon className="w-6 h-6 text-terminal-cyan group-hover:text-terminal-green transition-colors" />
-                      <div className="flex-1">
-                        <div className="text-terminal-green font-semibold">
+                      <Icon className="w-5 h-5 sm:w-6 sm:h-6 text-terminal-cyan group-hover:text-terminal-green transition-colors flex-shrink-0" />
+                      <div className="flex-1 min-w-0">
+                        <div className="text-terminal-green font-semibold text-sm sm:text-base">
                           {social.label}
                         </div>
-                        <div className="text-terminal-green/60 text-sm font-mono">
+                        <div className="text-terminal-green/60 text-xs sm:text-sm font-mono truncate">
                           {social.username}
                         </div>
                       </div>
@@ -166,25 +166,25 @@ const Contact = () => {
             </div>
 
             {/* Status Box */}
-            <div className="terminal-border bg-black/40 backdrop-blur-sm p-6">
-              <div className="text-terminal-cyan/60 text-sm mb-4 font-mono">
+            <div className="terminal-border bg-black/40 backdrop-blur-sm p-4 sm:p-5 md:p-6">
+              <div className="text-terminal-cyan/60 text-xs sm:text-sm mb-3 sm:mb-4 font-mono">
                 $ uptime
               </div>
-              <div className="space-y-3">
-                <div className="flex items-center justify-between">
-                  <span className="text-terminal-green/70 text-sm">Status:</span>
-                  <div className="flex items-center gap-2">
-                    <div className="w-2 h-2 bg-terminal-green rounded-full animate-pulse shadow-glow" />
-                    <span className="text-terminal-green text-sm font-mono">Online</span>
+              <div className="space-y-2.5 sm:space-y-3">
+                <div className="flex items-center justify-between gap-2">
+                  <span className="text-terminal-green/70 text-xs sm:text-sm">Status:</span>
+                  <div className="flex items-center gap-1.5 sm:gap-2">
+                    <div className="w-2 h-2 bg-terminal-green rounded-full animate-pulse shadow-glow flex-shrink-0" />
+                    <span className="text-terminal-green text-xs sm:text-sm font-mono">Online</span>
                   </div>
                 </div>
-                <div className="flex items-center justify-between">
-                  <span className="text-terminal-green/70 text-sm">Juwap beriw waqtı:</span>
-                  <span className="text-terminal-cyan text-sm font-mono">&lt; 24 saat</span>
+                <div className="flex items-center justify-between gap-2">
+                  <span className="text-terminal-green/70 text-xs sm:text-sm">Juwap beriw waqtı:</span>
+                  <span className="text-terminal-cyan text-xs sm:text-sm font-mono whitespace-nowrap">&lt; 24 saat</span>
                 </div>
-                <div className="flex items-center justify-between">
-                  <span className="text-terminal-green/70 text-sm">Online:</span>
-                  <span className="text-terminal-purple text-sm font-mono">24/7</span>
+                <div className="flex items-center justify-between gap-2">
+                  <span className="text-terminal-green/70 text-xs sm:text-sm">Online:</span>
+                  <span className="text-terminal-purple text-xs sm:text-sm font-mono">24/7</span>
                 </div>
               </div>
             </div>
